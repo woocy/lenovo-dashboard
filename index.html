@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>Lenovoconnect</title>
+<link rel="shortcut icon" href="favicon.ico"></head>
+<body>
+
+<header class="clearfix">
+    <div class="time-wrap pull-left clearfix" id="currentTime">
+        <span class="date">2018-05-15</span>
+        <span class="time">10:16:30</span>
+        <span class="week">星期二</span>
+    </div>
+    <div class="lang pull-right">中文</div>
+</header>
+<main class="clearfix">
+    <section class="left clearfix">
+        <div class="booth">
+            <div class="hd">连接数趋势</div>
+            <div class="bd box-wrap connect"></div>
+        </div>
+        <div class="booth">
+            <div class="hd">用量趋势</div>
+            <div class="bd box-wrap dosage">
+                <ul class="tabs clearfix tab0">
+                    <li data-tab="tab0">
+                        <span>总流量</span>
+                    </li>
+                    <li data-tab="tab1">
+                        <span>户均流量</span>
+                    </li>
+                    <li data-tab="tab2">
+                        <span>户均在网时长</span>
+                    </li>
+                    <li data-tab="tab3">
+                        <span>总短信</span>
+                    </li>
+                    <li data-tab="tab4">
+                        <span>总语言</span>
+                    </li>
+                </ul>
+                <ul class="content">
+                    <li class="total-dosage"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="booth">
+            <div class="hd">服务实时监控</div>
+            <div class="bd box-wrap service-real-time">
+                <div class="service-center clearfix">
+                    <div class="service-item pull-left">
+                        <div class="item service-enterprise">
+                            <div class="img"></div>
+                            <div class="value">####</div>
+                            <div class="title">服务企业（个）</div>
+                        </div>
+                        <div class="item login-today">
+                            <div class="img"></div>
+                            <div class="value">####</div>
+                            <div class="title">今日登录（次）</div>
+                        </div>
+                        <div class="item exception-login">
+                            <div class="img"></div>
+                            <div class="value">####</div>
+                            <div class="title">今日异常登录（次）</div>
+                        </div>
+                    </div>
+                    <div class="service-item pull-left">
+                        <div class="item interface-services">
+                            <div class="img"></div>
+                            <div class="value">####</div>
+                            <div class="title">接口服务企业（个）</div>
+                        </div>
+                        <div class="item call-today">
+                            <div class="img"></div>
+                            <div class="value">####</div>
+                            <div class="title">今日调用（次）</div>
+                        </div>
+                        <div class="item exception-call">
+                            <div class="img"></div>
+                            <div class="value">####</div>
+                            <div class="title">今日异常调用（次）</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="center clearfix">
+        <div class="booth-main box-wrap">
+            <!--<img src="assets/img/bj_title.png" width="100%" style="display: block;" alt=""/>-->
+            <div id="mapArea">
+                <h1><span class="logo"></span>全球智联服务</h1>
+                <div id="connections">
+                    <p class="fl">连接数</p>
+                    <ul class="fl" data="today_count">
+                        <li>9</li>
+                        <li>9</li>
+                        <li class="dot">,</li>
+                        <li>9</li>
+                        <li>9</li>
+                        <li>9</li>
+                        <li class="dot">,</li>
+                        <li>9</li>
+                        <li>9</li>
+                        <li>9</li>
+                    </ul>
+                </div>
+                <div id="four-groups">
+                    <ul>
+                        <li>
+                            <div class="fl img1"></div>
+                            <div class="fl">
+                                <p data="curc_count">10,000000</p>
+                                <p>当前在线</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl img2"></div>
+                            <div class="fl">
+                                <p data="month_new_count">10,000000</p>
+                                <p>本月新增</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl img3"></div>
+                            <div class="fl">
+                                <p data="month_count">10.00%</p>
+                                <p>上月同比<span class="grow"></span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl img4"></div>
+                            <div class="fl">
+                                <p data="chain_count">10.00%</p>
+                                <p>上月环比<span class="grow"></span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="booth-footer box-wrap">
+            <div class="hd">行业占比</div>
+            <div class="bd clearfix">
+                <ul class="industry-share">
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name1">智能车联</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale1"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value1">20%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name2">新零售</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale2"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value2">20%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name3">共享经济</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale3"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value3">40%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name4">智能金融</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale4"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value4">40%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name5">消费电子</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale5"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value5">15%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name6">工业物联网</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale6"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value6">15%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name7">智能政务</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale7"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value7">5%</div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left" data="industry_name8">农业物联网</div>
+                        <div class="rate pull-left">
+                            <div class="scale" data="industry_scale8"></div>
+                            <div class="plaid"></div>
+                        </div>
+                        <div class="value pull-left" data="industry_value8">5%</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="right clearfix">
+        <div class="booth">
+            <div class="hd">今日实时新增</div>
+            <div class="bd box-wrap today-real-time m-b">
+                <ul class="content">
+                    <li class="item clearfix">
+                        <div class="title pull-left">连接数</div>
+                        <div class="value pull-right">
+                            <span class="num" data="today_count">10,000</span>
+                            <span class="unit">个</span>
+                        </div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left">流量使用量</div>
+                        <div class="value pull-right">
+                            <span class="num" data="today_use_flow">100,000,000</span>
+                            <span class="unit">MB</span>
+                        </div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left">短信使用量</div>
+                        <div class="value pull-right">
+                            <span class="num" data="today_sms_use">100,000,000</span>
+                            <span class="unit">条</span>
+                        </div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left">语音使用量</div>
+                        <div class="value pull-right">
+                            <span class="num" data="today_voice_use">100,000,000</span>
+                            <span class="unit">分钟</span>
+                        </div>
+                    </li>
+                    <li class="item clearfix">
+                        <div class="title pull-left">在网时长</div>
+                        <div class="value pull-right">
+                            <span class="num" data="online_time">100,000,000</span>
+                            <span class="unit">分钟</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="booth">
+            <div class="hd">设备类型</div>
+            <div class="bd box-wrap device"></div>
+        </div>
+        <div class="booth">
+            <div class="hd">网络制式</div>
+            <div class="bd box-wrap internet"></div>
+        </div>
+    </section>
+</main>
+<script src="https://cdn.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://data.jianshukeji.com/geochina/china.js"></script>
+<script type="text/javascript" src="app.js"></script><script type="text/javascript" src="common.js"></script></body>
+</html>
